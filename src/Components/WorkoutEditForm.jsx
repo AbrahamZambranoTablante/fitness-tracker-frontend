@@ -1,9 +1,9 @@
 import React from 'react'
 
-const New = () => {
+const WorkoutEditForm = () => {
   return (
-    <div>New</div>
+    <div>WorkoutEditForm</div>
   )
 }
 
-export default New
+export default WorkoutEditForm

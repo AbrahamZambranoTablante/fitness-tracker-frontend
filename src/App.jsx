@@ -11,17 +11,10 @@ import New from "./Pages/New"
 import FourOFour from "./Pages/FourOFour"
 import Edit from "./Pages/Edit"
 
-const API = import.meta.env.VITE_API_URL;
+
 
 function App() {
   
-  useEffect(() => {
-    fetch(`${API}/workouts`)
-    .then((res) => {
-      return res.json()
-    })
-    .then(resJSON => console.log(resJSON))
-  }, [])
 
   return (
     <>
