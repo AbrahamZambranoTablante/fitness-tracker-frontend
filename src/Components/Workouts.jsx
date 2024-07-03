@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Workout from "./Workout"
 
 const Workouts = () => {
 
@@ -19,7 +20,7 @@ const Workouts = () => {
   return (
     <>
      <h1>WORKOUTS:</h1> 
-     {workouts.map(workout => <p key={workout.id}>{workout.type}</p>)}
+     {workouts.map(workout => <Workout  workout={workout}/> )}
      </>
   )
 }

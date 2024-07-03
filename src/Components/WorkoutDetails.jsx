@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 
 const WorkoutDetails = () => {
   let navigate = useNavigate(); 
@@ -23,7 +23,16 @@ const WorkoutDetails = () => {
     .catch(() => {
       navigate("/not-found")
     })
-  }, [id, navigate])
+  }, [id, navigate]);
+
+  function handleDelete () {
+    fetch(`${API}/workouts/${id}`, {
+      method: "DELETE"
+    })
+      .then(() => {
+        navigate("/workouts")
+      })
+  }
 
   return (
     <>
@@ -31,6 +40,8 @@ const WorkoutDetails = () => {
       <h2>Workout:<br/> {workout.type}</h2>
       <p>Minutes: {workout.durationInMinutes}</p>
       <p>Calories Burned: {workout.caloriesBurned}</p>
+      <Link to={`/workout/${id}/edit`}><button>Edit</button></Link>
+      <button onClick={handleDelete}>Delete</button>
     </>
   )
 }

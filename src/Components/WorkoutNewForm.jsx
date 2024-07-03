@@ -56,6 +56,7 @@ const WorkoutNewForm = () => {
         <input id="caloriesBurned" type="number" value={workout.caloriesBurned} onChange={handleTextChange} required/>
         <label htmlFor="date" className="">Date: </label>
         <input id="date" type="text" value={workout.date} onChange={handleTextChange} required/>
+        <input type='submit' value="submit"/>
       </form>
     </>
   )
