@@ -4,7 +4,6 @@ import WorkoutNewForm from '../Components/WorkoutNewForm'
 const New = () => {
   return (
     <>
-      New
       <WorkoutNewForm />
     </>
   )
