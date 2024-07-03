@@ -40,7 +40,7 @@ const WorkoutDetails = () => {
       <h2>Workout:<br/> {workout.type}</h2>
       <p>Minutes: {workout.durationInMinutes}</p>
       <p>Calories Burned: {workout.caloriesBurned}</p>
-      <Link to={`/workout/${id}/edit`}><button>Edit</button></Link>
+      <Link to={`/workouts/${id}/edit`}><button>Edit</button></Link>
       <button onClick={handleDelete}>Delete</button>
     </>
   )
